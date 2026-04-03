@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI图文识别系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI图文识别系统</h1>
+            <p class="info">学号：202335020558 | 姓名：王丛权</p>
+            <p class="desc">基于百度智能云OCR+通用物体识别API开发</p>
+        </header>
+
+        <!-- OCR文字识别卡片 -->
+        <div class="card">
+            <h2>📝 OCR文字识别</h2>
+            <input type="file" id="file1" accept="image/*">
+            <button id="ocrBtn">识别文字</button>
+            <textarea id="res1" readonly placeholder="识别结果将显示在这里"></textarea>
+        </div>
+
+        <!-- 图像物体识别卡片 -->
+        <div class="card">
+            <h2>🖼️ 通用物体识别</h2>
+            <input type="file" id="file2" accept="image/*">
+            <button id="imageBtn">识别物体</button>
+            <textarea id="res2" readonly placeholder="识别结果将显示在这里"></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
