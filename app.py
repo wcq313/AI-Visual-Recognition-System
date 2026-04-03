@@ -11,12 +11,11 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 CORS(app)
 
-# ======================= 你提供的三套密钥，我只留最稳定两个：OCR + 图像识别 =======================
 # 1. 文字识别(OCR)密钥
 OCR_AK = "r9lzPZBMa5IJzsfruDFRVHdJ"
 OCR_SK = "63BT186Zj7YptseAT0aCeZ6rcz83ldT3"
 
-# 2. 图像识别密钥（你刚刚发给我的）
+# 2. 图像识别密钥
 IMAGE_AK = "0CSu3TPVmyozZi43LrUVDXOd"
 IMAGE_SK = "acPspplNdxXfmBv01Aw32H4CDRQGQB3J"
 
@@ -64,7 +63,7 @@ def ocr():
         return jsonify({"code": 500, "msg": str(e)})
 
 
-# ------------------- 2. 通用图像识别（替换生图，最简单） -------------------
+# ------------------- 2. 通用图像识别 -------------------
 @app.route("/api/image", methods=["POST"])
 def image_recognize():
     try:
